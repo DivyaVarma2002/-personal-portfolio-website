@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   
+
+
+</head>
+<body>
+    <div class="marquee-container">
+       <marquee behavior="scroll" scrollamount="10%"> welcome to My Portfolio </marquee>
+    </div>
+    <div id="header">
+        <div class="container">
+            <nav>
+             <img src="logo.png"  alt="img" class="logo">
+             <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+               <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+             <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <p>Hi,<br>I'm <span>Divya</span>Varma From Mankhurd  <br>
+                 My goal is to excel in the field of technology ,
+                 and  contribute to innovative projects to make a good impact</p>
+                </div>
+        </div>
+    <!--about -->
+       <div id="about">
+       <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+            <img src="download.jpeg" alt="pic">
+            </div>
+           <div class="about-col-2">
+            <h1 class="sub-title"><b>About Me</b></h1>
+            <p>Hello,<br>
+              My name is divya varma.<br>
+              I stay in Mankhurd.<br>
+              I  graduated with bscit in the year 2023 from mumbai university in which i got 8.90 CGPI.<br>
+              I have also done a certification course in full stack java developer.<br>
+              I did my HSC from sai nath junior college in the year 2020 in which i got 53%.<br>
+              I did my SSC from royal public academy in the year 2018 in which i got 74%.
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skill')">Skills</p>
+                 </div>
+                <div class="tab-contents active-tab" id="skill">
+                <ul>
+                 <li><span style=" font-size:20px;">Front End Development</span><br><h4>Html , Css , Javascript , Bootstrap , Angular</h4></li>
+                 <li><span style=" font-size:20px;">Back End Development</span><br><h4>Java , Hibernate , Spring , React native</h4></li>
+                 </ul>
+                </ul>
+            </div>
+           </div>
+            
+        </div>
+    </div>
+</div>
+    
+<!-- service--->
+ 
+  <div id="service">
+    <div class="container">
+      <h1 class="sub-title">My Project</h1>
+        <div class="service-list">
+          <div> 
+            <h2>Portfolio website</h2>
+             <p>Project Name: Personal Portfolio Website.<br>
+                Language: Html , Css , Javascript , Bootstrap.<br>
+                Software: Visual studio.<br>
+              </p>
+                <a href="#">Learn more</a>
+          </div>
+          <div> 
+            <h2>Registration Form</h2>
+            <p>Project Name: Register Form App.<br>
+               Language: Java , Sql.<br>
+               Software:  Android studio.<br>
+             </p>
+                <a href="#">Learn more</a>
+          </div>
+        </div>
+    </div>
+ </div>
+
+
+<!---contact-->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h3 class="sub-title">Contact</h3>
+                <p><i class="fas fa-envelope"></i>varmadivya299@gmail.com</p>
+                <p><i class="fas fa-phone"></i>9920237579</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                <br>
+                <div>
+                <a href="" class="btn">Download CV</a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" row="6" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn btn2"><span style="font-size:30px;">submit</span></button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right">
+        <p>Copyright &copy Made By Divya.</p>
+    </div>
+</div>
+ <script>
+        var tablinks=document.getElementByClassName("tab-links");
+        var tabcontents=document.getElementByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+        {
+            tablink.classList.remove('active-link');
+
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove('active-tab');
+            
+        }
+        event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+   </script>
+   <script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+    </script>
+</body>
+</html>
